@@ -47,7 +47,12 @@ class BLEConnectVC: UIViewController {
         let queue = DispatchQueue.global()
         centralManager = CBCentralManager(delegate: self, queue: queue)
         
+        
     }
+    
+    
+    
+
 }
 
 extension BLEConnectVC: CBCentralManagerDelegate, CBPeripheralDelegate {

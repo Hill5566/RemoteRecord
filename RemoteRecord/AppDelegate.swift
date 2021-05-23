@@ -8,16 +8,41 @@
 import UIKit
 import AVFoundation
 import MediaPlayer
+import PodioKit
 
 var volume: Float = 0.5
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
+    var window: UIWindow?
+
     let audioSession = AVAudioSession.sharedInstance()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        window?.rootViewController = storyboard.instantiateInitialViewController()
+        window?.makeKeyAndVisible()
+        
+//        Podio.setup(
+//          :api_key    => 'YOUR_CLIENT_ID',
+//          :api_secret => 'YOUR_CLIENT_SECRET'
+//        )
+        
+        PodioKit.setup(withAPIKey: "remoterecord", secret: "Q2Ztmzg6bUTSbnD8Iukf2G0S35nS16m5SH9DgLnKslVe8sAQ4KvEKrWmvUhf7TgC")
+        PodioKit.automaticallyStoreTokenInKeychainForCurrentApp()
+        print("PodioKit.isAuthenticated()", PodioKit.isAuthenticated())
+
+        NotificationCenter.default.addObserver(self, selector:#selector(done(notification:)),name:Notification.Name(change_Root_VC),object: nil)
+
         return true
+    }
+    
+    @objc func done(notification: Notification) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.rootViewController = storyboard.instantiateViewController(identifier: "BLEConnectVC")
     }
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {

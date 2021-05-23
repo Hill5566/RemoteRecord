@@ -1,13 +1,20 @@
 
 import MobileCoreServices
 import UIKit
+import PodioKit
 
 class RecordVideoViewController: UIViewController {
    
     override func viewDidLoad() {
+        
+        
+        
         NotificationCenter.default.addObserver(self, selector: #selector(shootVideo), name: NSNotification.Name(rawValue: "_UIApplicationVolumeUpButtonDownNotification"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(shootVideo), name: NSNotification.Name(rawValue: "_UIApplicationVolumeDownButtonDownNotification"), object: nil)
     }
+    
+
+    
     
     let picker = UIImagePickerController()
     

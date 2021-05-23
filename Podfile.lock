@@ -1,0 +1,22 @@
+PODS:
+  - PodioKit (2.0.0):
+    - PodioKit/Common (= 2.0.0)
+  - PodioKit/Common (2.0.0)
+  - ProgressHUD (13.6)
+
+DEPENDENCIES:
+  - PodioKit (~> 2.0)
+  - ProgressHUD
+
+SPEC REPOS:
+  trunk:
+    - PodioKit
+    - ProgressHUD
+
+SPEC CHECKSUMS:
+  PodioKit: 176859750dcfc3002cb51b88e09594d80bbd4a4a
+  ProgressHUD: 4bdaa0d2ddf676b23324b199f9facffb5c3a1620
+
+PODFILE CHECKSUM: 61fbe1101fa9cdace282c2f68e0b4e218f3e2adb
+
+COCOAPODS: 1.9.1

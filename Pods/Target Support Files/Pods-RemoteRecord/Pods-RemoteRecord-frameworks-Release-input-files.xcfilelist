@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-RemoteRecord/Pods-RemoteRecord-frameworks.sh
+${BUILT_PRODUCTS_DIR}/PodioKit/PodioKit.framework
+${BUILT_PRODUCTS_DIR}/ProgressHUD/ProgressHUD.framework

@@ -1,0 +1,6 @@
+framework module PodioKit {
+  umbrella header "PodioKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
