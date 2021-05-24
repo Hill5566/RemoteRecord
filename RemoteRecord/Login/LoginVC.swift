@@ -12,6 +12,11 @@ import ProgressHUD
 
 class LoginVC: UIViewController {
 
+    @IBOutlet weak var emailTextField: UITextField!
+    
+    @IBOutlet weak var passwordTextField: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,22 +28,27 @@ class LoginVC: UIViewController {
     }
     
     func login()  {
-        let email = "angelblue065@gmail.com"
-        let password = "podio0000"
+        
+        let email = emailTextField.text
+        let password = passwordTextField.text
         
         ProgressHUD.show(pleaseWait)
         
         PodioKit.authenticateAsUser(withEmail: email, password: password)!.onSuccess({ (response) in
             
-            ProgressHUD.dismiss()
+            ProgressHUD.showSucceed()
             
             print("Successfully authenticated")
             
             NotificationCenter.default.post(name: Notification.Name(change_Root_VC), object: nil)
 
-            
         })?.onError({ (error) in
-            print(error)
+            
+            guard let error = error else {
+                ProgressHUD.showFailed()
+                return
+            }
+            ProgressHUD.showFailed(error.localizedDescription)
         })
     }
     

@@ -185,6 +185,10 @@
                             <constraint firstItem="yLA-Vy-ERk" firstAttribute="centerX" secondItem="ABh-n5-75h" secondAttribute="centerX" id="vjt-OT-bCp"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="gTw-QW-jaD" id="LkX-x6-BBG"/>
+                        <outlet property="passwordTextField" destination="vhZ-rJ-0jS" id="lKQ-nE-Yla"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D81-qB-VDr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
