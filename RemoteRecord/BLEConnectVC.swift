@@ -12,6 +12,10 @@ import MobileCoreServices
 
 class BLEConnectVC: UIViewController {
    
+    @IBAction func logoutButtonClick(_ sender: UIButton) {
+        userDefault.setAutoLogin(false)
+        UIManager.switchToLogin()
+    }
     @IBAction func next(_ sender: UIButton) {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RecordVideoViewController")
         vc.modalPresentationStyle = .fullScreen

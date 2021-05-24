@@ -21,8 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+//        UIManager.switchToLogin()
         window = UIWindow(frame: UIScreen.main.bounds)
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let storyboard = UIStoryboard(name: "Login", bundle: nil)
         window?.rootViewController = storyboard.instantiateInitialViewController()
         window?.makeKeyAndVisible()
         
@@ -35,14 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         PodioKit.automaticallyStoreTokenInKeychainForCurrentApp()
         print("PodioKit.isAuthenticated()", PodioKit.isAuthenticated())
 
-        NotificationCenter.default.addObserver(self, selector:#selector(done(notification:)),name:Notification.Name(change_Root_VC),object: nil)
-
         return true
-    }
-    
-    @objc func done(notification: Notification) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.rootViewController = storyboard.instantiateViewController(identifier: "BLEConnectVC")
     }
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {

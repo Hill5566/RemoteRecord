@@ -16,21 +16,38 @@ class LoginVC: UIViewController {
     
     @IBOutlet weak var passwordTextField: UITextField!
     
+    @IBOutlet weak var autoLoginButton: UIButton!
+    
+    @IBAction func autoLoginButtonClick(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-//        login()
+//        angelblue065@gmail.com
+//        podio0000
+        
+        if userDefault.autoLogin {
+            emailTextField.text = userDefault.email
+            passwordTextField.text = userDefault.passowrd
+            autoLoginButton.isSelected = true
+            print(userDefault.email, userDefault.passowrd)
+            login(userDefault.email, userDefault.passowrd)
+        }
+        
     }
     
     @IBAction func login(_ sender: UIButton) {
-        login()
-    }
-    
-    func login()  {
         
         let email = emailTextField.text
         let password = passwordTextField.text
+        
+        if email != "" && password != "" {
+            login(email, password)
+        }
+    }
+    
+    func login(_ email:String?, _ password:String?)  {
         
         ProgressHUD.show(pleaseWait)
         
@@ -40,9 +57,14 @@ class LoginVC: UIViewController {
             
             print("Successfully authenticated")
             
-            NotificationCenter.default.post(name: Notification.Name(change_Root_VC), object: nil)
+            userDefault.setAutoLogin(self.autoLoginButton.isSelected, email: email ?? "", password: password ?? "")
+            
+            UIManager.switchToBLEConnectVC()
+//            NotificationCenter.default.post(name: Notification.Name(change_Root_VC), object: nil)
 
         })?.onError({ (error) in
+            
+            print("onError authenticated", error?.localizedDescription)
             
             guard let error = error else {
                 ProgressHUD.showFailed()
