@@ -1,7 +1,6 @@
 
 import MobileCoreServices
 import UIKit
-import PodioKit
 
 class RecordVideoViewController: UIViewController {
    
@@ -9,8 +8,8 @@ class RecordVideoViewController: UIViewController {
         
         
         
-        NotificationCenter.default.addObserver(self, selector: #selector(shootVideo), name: NSNotification.Name(rawValue: "_UIApplicationVolumeUpButtonDownNotification"), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(shootVideo), name: NSNotification.Name(rawValue: "_UIApplicationVolumeDownButtonDownNotification"), object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(shootVideo), name: NSNotification.Name(rawValue: "_UIApplicationVolumeUpButtonDownNotification"), object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(shootVideo), name: NSNotification.Name(rawValue: "_UIApplicationVolumeDownButtonDownNotification"), object: nil)
     }
     
 
@@ -20,14 +19,14 @@ class RecordVideoViewController: UIViewController {
     
     @IBAction func record(_ sender: AnyObject) {
         
-        let toolbar = UIToolbar(frame: CGRect(x: 0, y: view.frame.size.height-54, width: view.frame.size.width, height: 54))
+        let toolbar = UIToolbar(frame: CGRect(x: 0, y: view.frame.size.height-84, width: view.frame.size.width, height: 54))
         let items = [UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancelVideo)),
                      UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil),
                      UIBarButtonItem(barButtonSystemItem: .camera, target: self, action: #selector(shootVideo)),
                      UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil),
                      UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)]
         toolbar.setItems(items, animated: false)
-        let overlayView:UIView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height-44))
+        let overlayView:UIView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height-84))
         overlayView.isOpaque = false
         overlayView.backgroundColor = .clear
         let cameraView = UIView(frame: view.bounds)
@@ -61,21 +60,21 @@ class RecordVideoViewController: UIViewController {
     }
 }
 
-// MARK: - UIImagePickerControllerDelegate
+//// MARK: - UIImagePickerControllerDelegate
 extension RecordVideoViewController: UIImagePickerControllerDelegate {
     func imagePickerController(
         _ picker: UIImagePickerController,
         didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]
     ) {
         dismiss(animated: true, completion: nil)
-        
+
         guard
             let mediaType = info[UIImagePickerController.InfoKey.mediaType] as? String,
             mediaType == (kUTTypeMovie as String),
             let url = info[UIImagePickerController.InfoKey.mediaURL] as? URL,
             UIVideoAtPathIsCompatibleWithSavedPhotosAlbum(url.path)
         else { return }
-        
+
         // Handle a movie capture
         UISaveVideoAtPathToSavedPhotosAlbum(
             url.path,

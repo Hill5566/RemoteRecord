@@ -8,4 +8,5 @@ target 'RemoteRecord' do
   # Pods for RemoteRecord
   pod 'PodioKit', '~> 2.0'
   pod 'ProgressHUD'
+  pod 'CameraManager', '~> 5.1'
 end

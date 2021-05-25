@@ -60,7 +60,6 @@ class LoginVC: UIViewController {
             userDefault.setAutoLogin(self.autoLoginButton.isSelected, email: email ?? "", password: password ?? "")
             
             UIManager.switchToBLEConnectVC()
-//            NotificationCenter.default.post(name: Notification.Name(change_Root_VC), object: nil)
 
         })?.onError({ (error) in
             

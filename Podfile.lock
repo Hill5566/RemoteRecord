@@ -1,22 +1,26 @@
 PODS:
+  - CameraManager (5.1.3)
   - PodioKit (2.0.0):
     - PodioKit/Common (= 2.0.0)
   - PodioKit/Common (2.0.0)
   - ProgressHUD (13.6)
 
 DEPENDENCIES:
+  - CameraManager (~> 5.1)
   - PodioKit (~> 2.0)
   - ProgressHUD
 
 SPEC REPOS:
   trunk:
+    - CameraManager
     - PodioKit
     - ProgressHUD
 
 SPEC CHECKSUMS:
+  CameraManager: 73936a52093081ba5e44914e8120ab511360f5d4
   PodioKit: 176859750dcfc3002cb51b88e09594d80bbd4a4a
   ProgressHUD: 4bdaa0d2ddf676b23324b199f9facffb5c3a1620
 
-PODFILE CHECKSUM: 61fbe1101fa9cdace282c2f68e0b4e218f3e2adb
+PODFILE CHECKSUM: a5c9104334f4857f851e00bb64317080a119da18
 
 COCOAPODS: 1.9.1

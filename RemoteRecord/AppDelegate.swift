@@ -15,17 +15,9 @@ var volume: Float = 0.5
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    var window: UIWindow?
-
     let audioSession = AVAudioSession.sharedInstance()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
-//        UIManager.switchToLogin()
-        window = UIWindow(frame: UIScreen.main.bounds)
-        let storyboard = UIStoryboard(name: "Login", bundle: nil)
-        window?.rootViewController = storyboard.instantiateInitialViewController()
-        window?.makeKeyAndVisible()
         
 //        Podio.setup(
 //          :api_key    => 'YOUR_CLIENT_ID',

@@ -22,11 +22,12 @@ class UIManager: NSObject {
     
     static func switchToLogin() {
         keyWindow?.rootViewController = loginStoryboard.instantiateViewController(withIdentifier: "LoginVC")
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.rootViewController = storyboard.instantiateViewController(identifier: "BLEConnectVC")
     }
     
     static func switchToBLEConnectVC() {
         keyWindow?.rootViewController = mainStoryboard.instantiateViewController(withIdentifier: "BLEConnectVC")
+    }
+    static func switchToRecordVideoVC() {
+        keyWindow?.rootViewController = mainStoryboard.instantiateViewController(withIdentifier: "RecordVideoViewController")
     }
 }
