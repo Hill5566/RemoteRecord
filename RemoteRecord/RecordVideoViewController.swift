@@ -1,15 +1,28 @@
 
 import MobileCoreServices
 import UIKit
+import CameraManager
 
 class RecordVideoViewController: UIViewController {
    
     override func viewDidLoad() {
         
+//        let cameraManager = CameraManager()
+//        cameraManager.addPreviewLayerToView(self.cameraView)
+//
+//        cameraManager.capturePictureWithCompletion({ result in
+//            switch result {
+//            case .failure:
+//                break
+//            // error handling
+//            case .success(let content):
+//                break
+//            //                    self.myImage = content.asImage;
+//            }
+//        })
         
-        
-//        NotificationCenter.default.addObserver(self, selector: #selector(shootVideo), name: NSNotification.Name(rawValue: "_UIApplicationVolumeUpButtonDownNotification"), object: nil)
-//        NotificationCenter.default.addObserver(self, selector: #selector(shootVideo), name: NSNotification.Name(rawValue: "_UIApplicationVolumeDownButtonDownNotification"), object: nil)
+//                NotificationCenter.default.addObserver(self, selector: #selector(shootVideo), name: NSNotification.Name(rawValue: "_UIApplicationVolumeUpButtonDownNotification"), object: nil)
+//                NotificationCenter.default.addObserver(self, selector: #selector(shootVideo), name: NSNotification.Name(rawValue: "_UIApplicationVolumeDownButtonDownNotification"), object: nil)
     }
     
 

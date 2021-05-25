@@ -16,11 +16,11 @@ class BLEConnectVC: UIViewController {
         userDefault.setAutoLogin(false)
         UIManager.switchToLogin()
     }
+    
     @IBAction func next(_ sender: UIButton) {
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RecordVideoViewController")
-        vc.modalPresentationStyle = .fullScreen
-        present(vc, animated: true, completion: nil)
+        present(UIManager.getCustomCameraVC(), animated: true, completion: nil)
     }
+    
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
     
@@ -51,11 +51,7 @@ class BLEConnectVC: UIViewController {
         let queue = DispatchQueue.global()
         centralManager = CBCentralManager(delegate: self, queue: queue)
         
-        
     }
-    
-    
-    
 
 }
 
