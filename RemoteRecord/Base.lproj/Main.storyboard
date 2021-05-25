@@ -38,11 +38,6 @@
                                     <action selector="logoutButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uAk-IU-RJ7"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZOm-AT-MOc">
-                                <rect key="frame" x="176" y="220" width="62" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="自訂相機"/>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
@@ -60,54 +55,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="142" y="116"/>
-        </scene>
-        <!--Record Video View Controller-->
-        <scene sceneID="lVD-0C-uOg">
-            <objects>
-                <viewController storyboardIdentifier="RecordVideoViewController" id="foX-jM-4Xw" customClass="RecordVideoViewController" customModule="RemoteRecord" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Nz3-5m-k9v"/>
-                        <viewControllerLayoutGuide type="bottom" id="wsZ-mN-io1"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Ymc-X0-ft3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tct-vh-9iH">
-                                <rect key="frame" x="161" y="433" width="92" height="30"/>
-                                <state key="normal" title="Record Video">
-                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="record:" destination="foX-jM-4Xw" eventType="touchUpInside" id="rhh-Lq-6Tj"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CLq-2O-1ea">
-                                <rect key="frame" x="24" y="116" width="366" height="40"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="lEo-4u-7ax"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="fJ0-8j-7A6"/>
-                        <color key="backgroundColor" systemColor="systemTealColor"/>
-                        <constraints>
-                            <constraint firstItem="CLq-2O-1ea" firstAttribute="top" secondItem="fJ0-8j-7A6" secondAttribute="top" constant="72" id="5xG-sf-1b8"/>
-                            <constraint firstItem="CLq-2O-1ea" firstAttribute="leading" secondItem="fJ0-8j-7A6" secondAttribute="leading" constant="24" id="7Dw-9J-SJF"/>
-                            <constraint firstItem="CLq-2O-1ea" firstAttribute="centerX" secondItem="Ymc-X0-ft3" secondAttribute="centerX" id="7fE-d5-Z1x"/>
-                            <constraint firstItem="fJ0-8j-7A6" firstAttribute="trailing" secondItem="CLq-2O-1ea" secondAttribute="trailing" constant="24" id="Hph-kt-XkO"/>
-                            <constraint firstItem="tct-vh-9iH" firstAttribute="centerY" secondItem="Ymc-X0-ft3" secondAttribute="centerY" id="Rgg-QS-vEC"/>
-                            <constraint firstItem="tct-vh-9iH" firstAttribute="centerX" secondItem="Ymc-X0-ft3" secondAttribute="centerX" id="b4X-G4-b2Q"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="QzE-0f-gSb"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1yY-FN-aQO" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1483" y="116"/>
         </scene>
         <!--Camera-->
         <scene sceneID="4u2-aT-oZi">

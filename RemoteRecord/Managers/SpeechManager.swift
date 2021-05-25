@@ -14,6 +14,7 @@ class SpeechManager {
     
     static func speak(_ text:String) {
         let speechText = AVSpeechUtterance(string: text)
+        speechText.volume = 0.5
         speechText.voice = AVSpeechSynthesisVoice(language: "zh-TW")
         speecher.speak(speechText)
     }

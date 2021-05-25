@@ -93,6 +93,8 @@ class CustomCameraVC: UIViewController {
         qualityLabel.isUserInteractionEnabled = true
         let qualityGesture = UITapGestureRecognizer(target: self, action: #selector(changeCameraQuality))
         qualityLabel.addGestureRecognizer(qualityGesture)
+        
+        setBlockVolumeTimer()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -109,11 +111,16 @@ class CustomCameraVC: UIViewController {
             }
         }
     }
-    
+    let notificationCenter = NotificationCenter.default
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        notificationCenter.addObserver(self, selector: #selector(shootVideo), name: NSNotification.Name(rawValue: "AVSystemController_SystemVolumeDidChangeNotification"), object: nil)
+    }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         cameraManager.stopQRCodeDetection()
         cameraManager.stopCaptureSession()
+        notificationCenter.removeObserver(self)
     }
     
     fileprivate func setupCameraManager() {
@@ -171,19 +178,34 @@ class CustomCameraVC: UIViewController {
                     }
                 }
             case .videoWithMic, .videoOnly:
-                shootVideo(sender: sender)
+                shootVideo()
         }
     }
-    
-    @objc func shootVideo(sender:UIButton) {
+    var blockVolumeChanged = true
+    func setBlockVolumeTimer() {
+        Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { timer in
+            print("Timer run block")
+            self.blockVolumeChanged = false
+            timer.invalidate()
+        }
+    }
+    @objc func shootVideo() {
+        print(#function)
+        if blockVolumeChanged {
+            return
+        }
+        blockVolumeChanged = true
+        setBlockVolumeTimer()
+        
+        print("record video")
         cameraButton.isSelected = !cameraButton.isSelected
         cameraButton.setTitle("", for: UIControl.State.selected)
         
         cameraButton.backgroundColor = cameraButton.isSelected ? redColor : lightBlue
-        if sender.isSelected {
+        if cameraButton.isSelected {
             
             cameraManager.startRecordingVideo()
-
+            
             SpeechManager.speak("開始錄影")
         } else {
             SpeechManager.speak("結束錄影")
