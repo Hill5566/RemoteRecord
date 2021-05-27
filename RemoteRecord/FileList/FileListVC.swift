@@ -11,6 +11,8 @@ class FileListVC: UIViewController {
 
     var fileList:[FileListModel] = []
      
+    @IBOutlet weak var mTableView: UITableView!
+    
     @IBAction func backClick(_ sender: UIButton) {
         
         dismiss(animated: true, completion: nil)
@@ -22,7 +24,8 @@ class FileListVC: UIViewController {
         super.viewDidLoad()
 
         fileList = UserDefaultManager.default.fileListModel
-        
+        print(fileList.count)
+        mTableView.reloadData()
     }
     
 
@@ -42,6 +45,10 @@ extension FileListVC: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath.row)
+        
+    }
     
     
     

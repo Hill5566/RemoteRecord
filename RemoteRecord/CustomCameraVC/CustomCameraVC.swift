@@ -204,8 +204,11 @@ class CustomCameraVC: UIViewController {
         cameraButton.backgroundColor = cameraButton.isSelected ? redColor : lightBlue
         if cameraButton.isSelected {
             
-            cameraManager.startRecordingVideo()
+            let fileName = cameraManager.startRecordingVideo()
             
+            if let f = fileName {
+                CustomPhotoAlbum.shared.addMediaFileList(timeStampFileName: f)
+            }
             SpeechManager.speak("開始錄影")
         } else {
             SpeechManager.speak("結束錄影")

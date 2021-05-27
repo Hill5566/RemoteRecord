@@ -367,12 +367,11 @@ open class CameraManager: NSObject, AVCaptureFileOutputRecordingDelegate, UIGest
     fileprivate var beginZoomScale = CGFloat(1.0)
     fileprivate var maxZoomScale = CGFloat(1.0)
     
-    fileprivate func _tempFilePath() -> URL {
-        let timeStampFileName = "\(Int(Date().timeIntervalSince1970))"
+    fileprivate func _tempFilePath(fileName:String) -> URL {
         if let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
-            return documentsDirectory.appendingPathComponent(timeStampFileName).appendingPathExtension("mp4")
+            return documentsDirectory.appendingPathComponent(fileName).appendingPathExtension("mp4")
         }
-        let tempURL = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(timeStampFileName).appendingPathExtension("mp4")
+        let tempURL = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(fileName).appendingPathExtension("mp4")
         return tempURL
     }
     
@@ -744,10 +743,10 @@ open class CameraManager: NSObject, AVCaptureFileOutputRecordingDelegate, UIGest
     /**
      Starts recording a video with or without voice as in the session preset.
      */
-    open func startRecordingVideo() {
+    open func startRecordingVideo() -> String? {
         guard cameraOutputMode != .stillImage else {
             _show(NSLocalizedString("Capture session output still image", comment: ""), message: NSLocalizedString("I can only take pictures", comment: ""))
-            return
+            return nil
         }
     
         let videoOutput = _getMovieOutput()
@@ -762,7 +761,7 @@ open class CameraManager: NSObject, AVCaptureFileOutputRecordingDelegate, UIGest
             
             // Create the metadata input and add it to the session.
             guard let captureSession = captureSession, let locationMetadata = locationMetadataDesc else {
-                return
+                return nil
             }
             
             let newLocationMetadataInput = AVCaptureMetadataInput(formatDescription: locationMetadata, clock: CMClockGetHostTimeClock())
@@ -776,7 +775,10 @@ open class CameraManager: NSObject, AVCaptureFileOutputRecordingDelegate, UIGest
 
         _updateIlluminationMode(flashMode)
         
-        videoOutput.startRecording(to: _tempFilePath(), recordingDelegate: self)
+        let fileName = "\(Int(Date().timeIntervalSince1970))"
+        videoOutput.startRecording(to: _tempFilePath(fileName: fileName), recordingDelegate: self)
+        
+        return fileName
     }
     
     /**
