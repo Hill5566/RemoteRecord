@@ -8,10 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		60F611A5E132E12F55A6972A /* Pods_RemoteRecord.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 042FA45C328564E1F5204AD7 /* Pods_RemoteRecord.framework */; };
-		6D43C27F265F919E001E655A /* CustomPhotoAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D43C27E265F919E001E655A /* CustomPhotoAlbum.swift */; };
 		6D43C282265F9EB2001E655A /* FileListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D43C281265F9EB2001E655A /* FileListVC.swift */; };
 		6D43C284265F9EC7001E655A /* FileList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D43C283265F9EC7001E655A /* FileList.storyboard */; };
-		6D43C286265FA493001E655A /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D43C285265FA493001E655A /* CameraManager.swift */; };
+		6D43C286265FA493001E655A /* (null) in Sources */ = {isa = PBXBuildFile; };
 		6D71FF24257DDAB4006D5E53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D71FF23257DDAB4006D5E53 /* AppDelegate.swift */; };
 		6D71FF26257DDAB4006D5E53 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D71FF25257DDAB4006D5E53 /* SceneDelegate.swift */; };
 		6D71FF28257DDAB4006D5E53 /* BLEConnectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D71FF27257DDAB4006D5E53 /* BLEConnectVC.swift */; };
@@ -31,7 +30,6 @@
 
 /* Begin PBXFileReference section */
 		042FA45C328564E1F5204AD7 /* Pods_RemoteRecord.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RemoteRecord.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6D43C27E265F919E001E655A /* CustomPhotoAlbum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPhotoAlbum.swift; sourceTree = "<group>"; };
 		6D43C281265F9EB2001E655A /* FileListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileListVC.swift; sourceTree = "<group>"; };
 		6D43C283265F9EC7001E655A /* FileList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FileList.storyboard; sourceTree = "<group>"; };
 		6D71FF20257DDAB4006D5E53 /* RemoteRecord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemoteRecord.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,7 +133,6 @@
 		6DB0419E265D030C001BF7E8 /* CustomCameraVC */ = {
 			isa = PBXGroup;
 			children = (
-				6D43C285265FA493001E655A /* CameraManager.swift */,
 				6DB04198265CFB40001BF7E8 /* CustomCameraVC.swift */,
 				6DB04199265CFB40001BF7E8 /* ImageViewController.swift */,
 			);
@@ -148,7 +145,6 @@
 				6DB6BC20265BB08400AED0B0 /* UserDefaultManager.swift */,
 				6DB6BC23265BDBBB00AED0B0 /* UIManager.swift */,
 				6DB04196265CFB2C001BF7E8 /* SpeechManager.swift */,
-				6D43C27E265F919E001E655A /* CustomPhotoAlbum.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -278,14 +274,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D71FF3A257DE0FC006D5E53 /* ZoetekDataProcessor.swift in Sources */,
-				6D43C27F265F919E001E655A /* CustomPhotoAlbum.swift in Sources */,
 				6D71FF28257DDAB4006D5E53 /* BLEConnectVC.swift in Sources */,
 				6D9EE726265A507F00A54EB0 /* Extensions.swift in Sources */,
 				6D9EE723265A47E500A54EB0 /* LoginVC.swift in Sources */,
 				6DB0419B265CFB40001BF7E8 /* ImageViewController.swift in Sources */,
 				6DB6BC21265BB08400AED0B0 /* UserDefaultManager.swift in Sources */,
 				6DB0419A265CFB40001BF7E8 /* CustomCameraVC.swift in Sources */,
-				6D43C286265FA493001E655A /* CameraManager.swift in Sources */,
+				6D43C286265FA493001E655A /* (null) in Sources */,
 				6DB04197265CFB2C001BF7E8 /* SpeechManager.swift in Sources */,
 				6D43C282265F9EB2001E655A /* FileListVC.swift in Sources */,
 				6D71FF24257DDAB4006D5E53 /* AppDelegate.swift in Sources */,
