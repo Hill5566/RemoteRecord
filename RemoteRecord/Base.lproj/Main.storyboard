@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2TP-z5-JA0">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -18,43 +18,55 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJo-Sm-gnB">
-                                <rect key="frame" x="186" y="117" width="42" height="21"/>
+                                <rect key="frame" x="186" y="161" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TfJ-ar-Y3q">
-                                <rect key="frame" x="186" y="330" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TfJ-ar-Y3q">
+                                <rect key="frame" x="184" y="368" width="46" height="30"/>
                                 <state key="normal" title="去錄影"/>
                                 <connections>
                                     <action selector="next:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8EL-Xd-DG0"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FPK-Sc-C44">
-                                <rect key="frame" x="346" y="44" width="48" height="30"/>
+                                <rect key="frame" x="346" y="88" width="48" height="30"/>
                                 <state key="normal" title="Logout"/>
                                 <connections>
                                     <action selector="logoutButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uAk-IU-RJ7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UQG-NT-lpf">
+                                <rect key="frame" x="184" y="433" width="46" height="30"/>
+                                <state key="normal" title="看檔案"/>
+                                <connections>
+                                    <action selector="goFileListVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xr1-T9-a0h"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
                         <constraints>
+                            <constraint firstItem="UQG-NT-lpf" firstAttribute="top" secondItem="TfJ-ar-Y3q" secondAttribute="bottom" constant="35" id="FQo-qV-Bqj"/>
                             <constraint firstItem="FPK-Sc-C44" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="KI6-Tk-mjJ"/>
+                            <constraint firstItem="UQG-NT-lpf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MUY-QS-owc"/>
+                            <constraint firstItem="FPK-Sc-C44" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="nF8-r5-Hvy"/>
+                            <constraint firstItem="TfJ-ar-Y3q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="q7m-MA-CPl"/>
                             <constraint firstItem="UJo-Sm-gnB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="73" id="qer-kR-XEq"/>
+                            <constraint firstItem="UQG-NT-lpf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="urQ-U2-wmd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FPK-Sc-C44" secondAttribute="trailing" constant="20" id="yRH-wl-HAs"/>
                             <constraint firstItem="UJo-Sm-gnB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yj5-Gj-uYV"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Hq9-Zm-SHu"/>
                     <connections>
                         <outlet property="nameLabel" destination="UJo-Sm-gnB" id="VsK-Zk-77j"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="142" y="116"/>
+            <point key="canvasLocation" x="1050.7246376811595" y="115.84821428571428"/>
         </scene>
         <!--Camera-->
         <scene sceneID="4u2-aT-oZi">
@@ -227,7 +239,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q6S-o6-pD9" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="819" y="116"/>
+            <point key="canvasLocation" x="1728.985507246377" y="115.84821428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ipb-9m-A9W">
+            <objects>
+                <navigationController storyboardIdentifier="navi" automaticallyAdjustsScrollViewInsets="NO" id="2TP-z5-JA0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wZN-kL-kkR">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="SIa-C3-Csq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zBd-Fu-Z52" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140.57971014492756" y="115.84821428571428"/>
         </scene>
     </scenes>
     <resources>

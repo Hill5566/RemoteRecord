@@ -18,7 +18,12 @@ class BLEConnectVC: UIViewController {
     }
     
     @IBAction func next(_ sender: UIButton) {
+//        navigationController?.pushViewController(UIManager.getCustomCameraVC(), animated: true)
         present(UIManager.getCustomCameraVC(), animated: true, completion: nil)
+    }
+    @IBAction func goFileListVC(_ sender: UIButton) {
+//        navigationController?.pushViewController(UIManager.getFileListVC(), animated: true)
+        present(UIManager.getFileListVC(), animated: true, completion: nil)
     }
     
     @IBOutlet weak var nameLabel: UILabel!

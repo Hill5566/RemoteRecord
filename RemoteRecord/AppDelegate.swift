@@ -10,7 +10,6 @@ import AVFoundation
 import MediaPlayer
 import PodioKit
 
-var volume: Float = 0.5
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,12 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-//        Podio.setup(
-//          :api_key    => 'YOUR_CLIENT_ID',
-//          :api_secret => 'YOUR_CLIENT_SECRET'
-//        )
-        
-        PodioKit.setup(withAPIKey: "remoterecord", secret: "Q2Ztmzg6bUTSbnD8Iukf2G0S35nS16m5SH9DgLnKslVe8sAQ4KvEKrWmvUhf7TgC")
+        PodioKit.setup(withAPIKey: PODIO_KEY, secret: PODIO_SECRET)
         PodioKit.automaticallyStoreTokenInKeychainForCurrentApp()
         print("PodioKit.isAuthenticated()", PodioKit.isAuthenticated())
 

@@ -42,4 +42,37 @@ class UserDefaultManager: NSObject {
             self.passowrd = ""
         }
     }
+    
+    var fileListModel: [FileListModel] {
+        set {
+            let data = try! JSONEncoder().encode(newValue)
+            UserDefaults.standard.set(data, forKey: "FileListModel")
+        }
+        get {
+            if let d = UserDefaults.standard.data(forKey: "FileListModel") {
+              let stored = try! JSONDecoder().decode([FileListModel].self, from: d)
+              return stored
+            } else {
+                return []
+            }
+        }
+    }
+}
+class FileListModel:Codable {
+
+    var timeStampFileName:String = ""
+    
+    init(timeStampFileName:String) {
+        self.timeStampFileName = timeStampFileName
+    }
+    
+    func toDateFormat() -> String {
+        
+        guard let ts = Double(timeStampFileName) else { return "" }
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = " yyyy-MM-dd HH:mm:ss"
+        let d = Date(timeIntervalSince1970: ts)
+        return dateFormatter.string(from: d)
+    }
 }

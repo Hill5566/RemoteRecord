@@ -126,6 +126,7 @@
 		6C0F7B70BA5E5859406DF123D12378A2 /* PKTKeychainTokenStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D1DD9C9551BD1B0B1A6CEC776E18C42 /* PKTKeychainTokenStore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6C242AA6866B4E9A86F0BA58BAC9453B /* PKTNotificationsRequestParameters.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F18484784B0764B84B65EC49F51773A /* PKTNotificationsRequestParameters.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6CE1662098CA6B0D9E4352956FB1CF9E /* PKTClient.h in Headers */ = {isa = PBXBuildFile; fileRef = B608492DAAE307D48315A25A692C355D /* PKTClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D43C288265FA4C4001E655A /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D43C287265FA4C4001E655A /* CameraManager.swift */; };
 		705FD4CC47BAAF91672DCC10016BECB5 /* PKTPushCredential.h in Headers */ = {isa = PBXBuildFile; fileRef = 42C4D3463D06E786CB97BFF96090EFCA /* PKTPushCredential.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		71210400EDB7B9510FE6CBC20D43256C /* NSDictionary+PKTAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 830AA17FC31B0357B17795F59BEA97BB /* NSDictionary+PKTAdditions.m */; };
 		7244DFB2F08403E0DC2A74856AFCA0C1 /* NSSet+PKTAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 65D55E06BC525D0801B3ABCA25A2C511 /* NSSet+PKTAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -250,7 +251,6 @@
 		EDEE14A6E43E6025D858D1C7C378C4AC /* PKTConversation.m in Sources */ = {isa = PBXBuildFile; fileRef = 970FF7BF7FE09FA9707A398CAB213E8A /* PKTConversation.m */; };
 		EF768E33BC935E34FBC56D6CB83D207D /* PKTCalendarAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A0A42C4362DA8AAE4E5A1CC592724DF /* PKTCalendarAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F0C382995C61AAD9BE0E14FE741C7BB0 /* PKTMultipartFormData.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9931A2EFC94162FFF7C1D2E95592C8 /* PKTMultipartFormData.m */; };
-		F0ED9427F0D9BC2423502492213EB966 /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5BA7B8BDE227679B40C60EF18D27C0 /* CameraManager.swift */; };
 		F444014BFD84CD07F7558A4E0CA9817B /* PKTItemFieldValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 1330F72FB13918AA705BA9D983918267 /* PKTItemFieldValue.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F49EC8BBFF1B142CD43F71C3A4E8AEAA /* PKTFileItemFieldValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FE362AB1C0ADD0F85C30DC2309573E1 /* PKTFileItemFieldValue.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F50BA4E8479433EC86BEAED68ECC60A3 /* PKTSearchAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1B43017A4AE34114A2AB0624D851E1 /* PKTSearchAPI.m */; };
@@ -301,7 +301,7 @@
 		0AE393A0087EDAA36DEA90D8DDB9BA9B /* PKTRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKTRequest.m; path = PodioKit/Common/Core/PKTRequest.m; sourceTree = "<group>"; };
 		0C3577516DA397B66A336972BD30D5F7 /* PKTHTTPClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKTHTTPClient.m; path = PodioKit/Common/Core/PKTHTTPClient.m; sourceTree = "<group>"; };
 		0D2390506B6E7856608044CCBB4D46A1 /* NSDate+PKTAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDate+PKTAdditions.h"; path = "PodioKit/Common/Support/NSDate+PKTAdditions.h"; sourceTree = "<group>"; };
-		0D3287058D2F13BD484A454154BEA62B /* ProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ProgressHUD.framework; path = ProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D3287058D2F13BD484A454154BEA62B /* ProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DC086E035E3A98CF7009C2DE26BF430 /* NSValueTransformer+PKTTransformers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSValueTransformer+PKTTransformers.h"; path = "PodioKit/Common/Support/NSValueTransformer+PKTTransformers.h"; sourceTree = "<group>"; };
 		0FF92DA45B95E80D4E381186E671EA06 /* PKTFormSettings.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKTFormSettings.m; path = PodioKit/Common/Models/PKTFormSettings.m; sourceTree = "<group>"; };
 		1169839FE7834E67FC5DCC1DA184A5AB /* PodioKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PodioKit.h; path = PodioKit/Common/PodioKit.h; sourceTree = "<group>"; };
@@ -325,7 +325,7 @@
 		1D9931A2EFC94162FFF7C1D2E95592C8 /* PKTMultipartFormData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKTMultipartFormData.m; path = PodioKit/Common/Core/PKTMultipartFormData.m; sourceTree = "<group>"; };
 		1DDEE37EC777B42977B58B27B18ED318 /* Pods-RemoteRecord-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RemoteRecord-frameworks.sh"; sourceTree = "<group>"; };
 		1DFF6BCE8660C4B1200A876F82AD6DCC /* PKTApp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKTApp.h; path = PodioKit/Common/Models/PKTApp.h; sourceTree = "<group>"; };
-		1E45A360335DFDC846BDF8F709C3A284 /* CameraManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CameraManager.framework; path = CameraManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E45A360335DFDC846BDF8F709C3A284 /* CameraManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CameraManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E4A68947C7335D22F2F69D9A6F2D1F0 /* NSString+PKTAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+PKTAdditions.m"; path = "PodioKit/Common/Support/NSString+PKTAdditions.m"; sourceTree = "<group>"; };
 		1F5C417B9DA81F9C35408779072741EB /* PKTEmbedsAPI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKTEmbedsAPI.h; path = PodioKit/Common/API/PKTEmbedsAPI.h; sourceTree = "<group>"; };
 		21A3F47BC0EEBD58B1E83C2D39188A36 /* PKTModelValueTransformer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKTModelValueTransformer.h; path = PodioKit/Common/Support/PKTModelValueTransformer.h; sourceTree = "<group>"; };
@@ -406,6 +406,7 @@
 		691461E4BF1B2A0BFE5673648D3C8E8D /* PKTKeychain.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKTKeychain.h; path = PodioKit/Common/Core/PKTKeychain.h; sourceTree = "<group>"; };
 		6984A5D83839EA17938BE4D7AE919608 /* PKTReferenceObjectFactory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKTReferenceObjectFactory.h; path = PodioKit/Common/Models/PKTReferenceObjectFactory.h; sourceTree = "<group>"; };
 		6BB1B5D05B7CA9B8136317BBF0A3EE18 /* PKTOrganization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKTOrganization.h; path = PodioKit/Common/Models/PKTOrganization.h; sourceTree = "<group>"; };
+		6D43C287265FA4C4001E655A /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
 		6EA06F4E7CFC680E35BFEC6ECB74744B /* PKTMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKTMessage.h; path = PodioKit/Common/Models/PKTMessage.h; sourceTree = "<group>"; };
 		6F18484784B0764B84B65EC49F51773A /* PKTNotificationsRequestParameters.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKTNotificationsRequestParameters.h; path = PodioKit/Common/API/PKTNotificationsRequestParameters.h; sourceTree = "<group>"; };
 		6F1B43017A4AE34114A2AB0624D851E1 /* PKTSearchAPI.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKTSearchAPI.m; path = PodioKit/Common/API/PKTSearchAPI.m; sourceTree = "<group>"; };
@@ -465,7 +466,7 @@
 		9998D8AD9231673D61557F33D42645B0 /* CameraManager-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CameraManager-Info.plist"; sourceTree = "<group>"; };
 		9A0A42C4362DA8AAE4E5A1CC592724DF /* PKTCalendarAPI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKTCalendarAPI.h; path = PodioKit/Common/API/PKTCalendarAPI.h; sourceTree = "<group>"; };
 		9D73F0058B955DB06DED20F879DB78C2 /* PKTCategoryItemFieldValue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKTCategoryItemFieldValue.h; path = PodioKit/Common/Models/PKTCategoryItemFieldValue.h; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DA9B78996958C734AE6B18A900B5962 /* PKTOAuth2Token.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKTOAuth2Token.h; path = PodioKit/Common/Models/PKTOAuth2Token.h; sourceTree = "<group>"; };
 		A42DD6CFBC756A94030DA4D0CEEBCC43 /* UIImageView+PKTRemoteImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+PKTRemoteImage.h"; path = "PodioKit/UIKit/UIImageView+PKTRemoteImage.h"; sourceTree = "<group>"; };
 		A47A851527E7AB3121BF785B2C3118D0 /* PKTAuthenticationAPI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKTAuthenticationAPI.h; path = PodioKit/Common/API/PKTAuthenticationAPI.h; sourceTree = "<group>"; };
@@ -476,7 +477,7 @@
 		A80C17DE6D90037B2EDD3EE08DE6B04C /* PKTAppsAPI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKTAppsAPI.h; path = PodioKit/Common/API/PKTAppsAPI.h; sourceTree = "<group>"; };
 		A83E79D3D2F1086D55BF8088291479F1 /* PKTConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKTConstants.h; path = PodioKit/Common/Support/PKTConstants.h; sourceTree = "<group>"; };
 		A8F39C0F6BBD2529F426B81DB57BBCE1 /* PKTPushCredential.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKTPushCredential.m; path = PodioKit/Common/Models/PKTPushCredential.m; sourceTree = "<group>"; };
-		A9516FF5B9755055829DBDF0D20CD694 /* PodioKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PodioKit.framework; path = PodioKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9516FF5B9755055829DBDF0D20CD694 /* PodioKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PodioKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A96DB4976743DB9EEE8A852D1FB81E46 /* PKTRequestParameters.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKTRequestParameters.h; path = PodioKit/Common/API/PKTRequestParameters.h; sourceTree = "<group>"; };
 		AA6A3E4C6E518F451186855209D6D240 /* PKTUsersAPI.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKTUsersAPI.m; path = PodioKit/Common/API/PKTUsersAPI.m; sourceTree = "<group>"; };
 		AADE0136C05CB7C82E4D28CD8343FD5A /* PKTImageDownloader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKTImageDownloader.h; path = PodioKit/UIKit/PKTImageDownloader.h; sourceTree = "<group>"; };
@@ -532,7 +533,7 @@
 		D6BB1D3CD3BC138B259CAAB66A5EE81C /* PKTDateItemFieldValue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKTDateItemFieldValue.h; path = PodioKit/Common/Models/PKTDateItemFieldValue.h; sourceTree = "<group>"; };
 		D790FDF5123D3D17E4D43DF320070133 /* Pods-RemoteRecord-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RemoteRecord-acknowledgements.plist"; sourceTree = "<group>"; };
 		D866E89ADFFA76C53C25D0CBD3399479 /* NSDateFormatter+PKTAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDateFormatter+PKTAdditions.m"; path = "PodioKit/Common/Support/NSDateFormatter+PKTAdditions.m"; sourceTree = "<group>"; };
-		DB223AB90B183089B4A7434991785BEC /* Pods_RemoteRecord.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_RemoteRecord.framework; path = "Pods-RemoteRecord.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB223AB90B183089B4A7434991785BEC /* Pods_RemoteRecord.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RemoteRecord.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC59CBC9118FD5A7623B88A83A96A639 /* PKTEmbed.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKTEmbed.h; path = PodioKit/Common/Models/PKTEmbed.h; sourceTree = "<group>"; };
 		DC645AA1E15C9E5ADB08F6821E600FBA /* ProgressHUD-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ProgressHUD-Info.plist"; sourceTree = "<group>"; };
 		DC705D6B06EE6A9D580419F3485764F9 /* PKTLocation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKTLocation.m; path = PodioKit/Common/Models/PKTLocation.m; sourceTree = "<group>"; };
@@ -550,7 +551,6 @@
 		EAE138227714AF17AE5807069ACA71C6 /* NSValueTransformer+PKTConstants.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSValueTransformer+PKTConstants.m"; path = "PodioKit/Common/Support/NSValueTransformer+PKTConstants.m"; sourceTree = "<group>"; };
 		EC5DEE00E6856C078F70CBC892F97412 /* PKTTask.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PKTTask.h; path = PodioKit/Common/Models/PKTTask.h; sourceTree = "<group>"; };
 		ED030976D7DE687C0C2DA67CDE774C50 /* NSDictionary+PKTQueryParameters.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+PKTQueryParameters.h"; path = "PodioKit/Common/Support/NSDictionary+PKTQueryParameters.h"; sourceTree = "<group>"; };
-		ED5BA7B8BDE227679B40C60EF18D27C0 /* CameraManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CameraManager.swift; path = Sources/CameraManager.swift; sourceTree = "<group>"; };
 		EEE6F76E508A8ED26D171ACA2A8196A1 /* PKTAppField.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKTAppField.m; path = PodioKit/Common/Models/PKTAppField.m; sourceTree = "<group>"; };
 		EEEF45B6C5E15FB7509B8028BB255552 /* PKTWorkspacesAPI.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKTWorkspacesAPI.m; path = PodioKit/Common/API/PKTWorkspacesAPI.m; sourceTree = "<group>"; };
 		F07D86928B96DD3E21407C6B7A32E4B5 /* PKTDuration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PKTDuration.m; path = PodioKit/Common/Models/PKTDuration.m; sourceTree = "<group>"; };
@@ -662,10 +662,9 @@
 		41D0634ACB2374F5A21F03AE8CCD77F7 /* CameraManager */ = {
 			isa = PBXGroup;
 			children = (
-				ED5BA7B8BDE227679B40C60EF18D27C0 /* CameraManager.swift */,
+				6D43C287265FA4C4001E655A /* CameraManager.swift */,
 				27BA9FEF80AE13D4FDB681AE1687EBB4 /* Support Files */,
 			);
-			name = CameraManager;
 			path = CameraManager;
 			sourceTree = "<group>";
 		};
@@ -728,7 +727,6 @@
 				CEA31D98EA28D9713524E047AEB9EDCB /* Common */,
 				28A3867065969A5E63D311A7805C2793 /* Support Files */,
 			);
-			name = PodioKit;
 			path = PodioKit;
 			sourceTree = "<group>";
 		};
@@ -738,7 +736,6 @@
 				3ABBD9FF16F828CC906759C0DD9D9235 /* ProgressHUD.swift */,
 				545F11369A78A2BE35B787094E4035C2 /* Support Files */,
 			);
-			name = ProgressHUD;
 			path = ProgressHUD;
 			sourceTree = "<group>";
 		};
@@ -1316,7 +1313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				23D5DD4D13DD4A6622DC96A8A440AA09 /* CameraManager-dummy.m in Sources */,
-				F0ED9427F0D9BC2423502492213EB966 /* CameraManager.swift in Sources */,
+				6D43C288265FA4C4001E655A /* CameraManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
