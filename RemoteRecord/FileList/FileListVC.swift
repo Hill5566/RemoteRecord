@@ -23,7 +23,7 @@ class FileListVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        fileList = UserDefaultManager.default.fileListModel
+        fileList = FileManager().getMovieNames()
         print(fileList.count)
         mTableView.reloadData()
     }

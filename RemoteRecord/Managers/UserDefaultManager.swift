@@ -68,7 +68,7 @@ class FileListModel:Codable {
     
     func toDateFormat() -> String {
         
-        guard let ts = Double(timeStampFileName) else { return "" }
+        guard let ts = Double(timeStampFileName.replacingOccurrences(of: ".mp4", with: "")) else { return "" }
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = " yyyy-MM-dd HH:mm:ss"

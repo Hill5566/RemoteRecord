@@ -4,6 +4,7 @@
 //
 //  Created by Hill Lin on 2021/5/23.
 //
+import UIKit
 
 let PODIO_KEY = "remoterecord"
 let PODIO_SECRET = "Q2Ztmzg6bUTSbnD8Iukf2G0S35nS16m5SH9DgLnKslVe8sAQ4KvEKrWmvUhf7TgC"
@@ -16,5 +17,25 @@ let change_Root_VC = "change_Root_VC"
 extension Double {
     func toInt() -> Int {
         return Int(self)
+    }
+}
+
+extension FileManager {
+    func getMovieNames() -> [FileListModel] {
+        var movies:[FileListModel] = []
+        do {
+            let tmpDirURL = FileManager.default.temporaryDirectory
+            let tmpDirectory = try contentsOfDirectory(atPath: tmpDirURL.path)
+            for item in tmpDirectory {
+                if item.contains("tempMovie") {
+                    print(item)
+                    movies.append(FileListModel(timeStampFileName: item.replacingOccurrences(of: "tempMovie", with: "")))
+                }
+                
+            }
+        } catch {
+           //catch the error somehow
+        }
+        return movies
     }
 }
