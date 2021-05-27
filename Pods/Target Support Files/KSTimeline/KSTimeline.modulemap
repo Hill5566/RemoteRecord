@@ -1,0 +1,6 @@
+framework module KSTimeline {
+  umbrella header "KSTimeline-umbrella.h"
+
+  export *
+  module * { export * }
+}
