@@ -48,6 +48,13 @@ extension FileListVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath.row)
         
+        let fileName = fileList[indexPath.row]
+        let urlString:String? = FileManager().getVideoPathUrl(fileName: fileName.timeStampFileName)
+        
+        let vc = UIManager.getVideoViewerVC()
+        vc.videoUrl = URL(string: urlString ?? "")
+        
+        present(vc, animated: true, completion: nil)
     }
     
     

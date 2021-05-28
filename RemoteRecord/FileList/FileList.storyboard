@@ -17,8 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7Dn-oT-MIY">
-                                <rect key="frame" x="1" y="90" width="414" height="772"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7Dn-oT-MIY">
+                                <rect key="frame" x="0.0" y="90" width="414" height="772"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="zup-T1-jbz">
@@ -61,6 +61,122 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="132" y="72"/>
+        </scene>
+        <!--Demo2-->
+        <scene sceneID="k4p-4H-lPg">
+            <objects>
+                <viewController storyboardIdentifier="VideoViewerVC" id="16p-JJ-BrK" customClass="VideoViewerVC" customModule="RemoteRecord" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lI5-86-cqJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mEV-b4-S9H">
+                                <rect key="frame" x="0.0" y="144" width="414" height="614"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ii0-UB-fm6" userLabel="Control Panel">
+                                <rect key="frame" x="0.0" y="758" width="414" height="44"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CgT-8b-Fo3">
+                                        <rect key="frame" x="203" y="11.5" width="8" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="PfC-bF-Gco"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X1b-kU-ff6" userLabel="Previous">
+                                        <rect key="frame" x="0.0" y="0.0" width="46" height="38"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="46" id="VMJ-K0-TmZ"/>
+                                        </constraints>
+                                        <state key="normal" title="&lt;"/>
+                                        <connections>
+                                            <action selector="didPressPreviousVideoBtn:" destination="16p-JJ-BrK" eventType="touchUpInside" id="UzG-RK-6Fm"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T7X-ZQ-oZE" userLabel="Next">
+                                        <rect key="frame" x="368" y="0.0" width="46" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="46" id="mYB-Ct-4xb"/>
+                                        </constraints>
+                                        <state key="normal" title="&gt;"/>
+                                        <connections>
+                                            <action selector="didPressNextVideoBtn:" destination="16p-JJ-BrK" eventType="touchUpInside" id="65X-bO-MU1"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="CgT-8b-Fo3" firstAttribute="centerY" secondItem="Ii0-UB-fm6" secondAttribute="centerY" id="1yU-lV-V4A"/>
+                                    <constraint firstAttribute="bottom" secondItem="X1b-kU-ff6" secondAttribute="bottom" constant="6" id="Qhi-IK-7EK"/>
+                                    <constraint firstAttribute="trailing" secondItem="T7X-ZQ-oZE" secondAttribute="trailing" id="YJo-dD-T05"/>
+                                    <constraint firstAttribute="bottom" secondItem="T7X-ZQ-oZE" secondAttribute="bottom" id="haR-nE-4y1"/>
+                                    <constraint firstItem="T7X-ZQ-oZE" firstAttribute="top" secondItem="Ii0-UB-fm6" secondAttribute="top" id="psT-fC-Nt9"/>
+                                    <constraint firstItem="X1b-kU-ff6" firstAttribute="leading" secondItem="Ii0-UB-fm6" secondAttribute="leading" id="rmH-gF-Gh2"/>
+                                    <constraint firstItem="CgT-8b-Fo3" firstAttribute="centerX" secondItem="Ii0-UB-fm6" secondAttribute="centerX" id="tuh-jy-HH7"/>
+                                    <constraint firstItem="X1b-kU-ff6" firstAttribute="top" secondItem="Ii0-UB-fm6" secondAttribute="top" id="wCx-zG-LQQ"/>
+                                    <constraint firstAttribute="height" constant="44" id="ziY-es-0ua"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uh1-C1-aaF" customClass="KSTimelineView" customModule="KSTimeline">
+                                <rect key="frame" x="0.0" y="802" width="414" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="T56-Ak-F1W"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="contentWidth">
+                                        <real key="value" value="3200"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Of2-wI-yAL">
+                                <rect key="frame" x="20" y="44" width="53" height="30"/>
+                                <state key="normal" title="&lt; BACK"/>
+                                <connections>
+                                    <action selector="backClick:" destination="16p-JJ-BrK" eventType="touchUpInside" id="bxA-UL-XtJ"/>
+                                    <action selector="backClick:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="kzV-ij-pWL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7RD-A0-VZ4"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ii0-UB-fm6" firstAttribute="bottom" secondItem="uh1-C1-aaF" secondAttribute="top" id="1h2-7z-rEU"/>
+                            <constraint firstItem="uh1-C1-aaF" firstAttribute="leading" secondItem="7RD-A0-VZ4" secondAttribute="leading" id="2kr-hL-Ep4"/>
+                            <constraint firstItem="Ii0-UB-fm6" firstAttribute="leading" secondItem="7RD-A0-VZ4" secondAttribute="leading" id="7LH-eO-VXr"/>
+                            <constraint firstItem="7RD-A0-VZ4" firstAttribute="trailing" secondItem="Ii0-UB-fm6" secondAttribute="trailing" id="FfM-vP-28h"/>
+                            <constraint firstItem="7RD-A0-VZ4" firstAttribute="trailing" secondItem="mEV-b4-S9H" secondAttribute="trailing" id="GkL-Wc-4qG"/>
+                            <constraint firstItem="Of2-wI-yAL" firstAttribute="leading" secondItem="7RD-A0-VZ4" secondAttribute="leading" constant="20" id="SlC-cw-iao"/>
+                            <constraint firstItem="Ii0-UB-fm6" firstAttribute="top" secondItem="mEV-b4-S9H" secondAttribute="bottom" id="h6w-yx-yxo"/>
+                            <constraint firstItem="uh1-C1-aaF" firstAttribute="bottom" secondItem="7RD-A0-VZ4" secondAttribute="bottom" id="hcJ-kB-YuN"/>
+                            <constraint firstItem="mEV-b4-S9H" firstAttribute="top" secondItem="7RD-A0-VZ4" secondAttribute="top" constant="100" id="iG1-U8-sOy"/>
+                            <constraint firstItem="uh1-C1-aaF" firstAttribute="trailing" secondItem="7RD-A0-VZ4" secondAttribute="trailing" id="iwv-av-mib"/>
+                            <constraint firstItem="mEV-b4-S9H" firstAttribute="leading" secondItem="7RD-A0-VZ4" secondAttribute="leading" id="oBs-Xg-cRG"/>
+                            <constraint firstItem="Of2-wI-yAL" firstAttribute="top" secondItem="7RD-A0-VZ4" secondAttribute="top" id="pbW-iu-FYH"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Demo2" id="TYE-nl-Pux">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="play" id="a9o-n2-FES">
+                            <connections>
+                                <action selector="didPressPlayBtn:" destination="16p-JJ-BrK" id="zco-V1-IDa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="currentTime" destination="CgT-8b-Fo3" id="Oz8-R6-L7G"/>
+                        <outlet property="nextBtn" destination="T7X-ZQ-oZE" id="8hK-V6-EFX"/>
+                        <outlet property="playBtn" destination="a9o-n2-FES" id="sDG-kQ-Ms8"/>
+                        <outlet property="prevousBtn" destination="X1b-kU-ff6" id="ots-dI-MdE"/>
+                        <outlet property="timeline" destination="uh1-C1-aaF" id="zaQ-IQ-HsU"/>
+                        <outlet property="videoContainer" destination="mEV-b4-S9H" id="glB-vk-Ugv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ys3-Cp-JVB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="830" y="72"/>
         </scene>
     </scenes>
     <resources>

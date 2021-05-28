@@ -22,20 +22,39 @@ extension Double {
 
 extension FileManager {
     func getMovieNames() -> [FileListModel] {
-        var movies:[FileListModel] = []
+        var videos:[FileListModel] = []
         do {
             let tmpDirURL = FileManager.default.temporaryDirectory
             let tmpDirectory = try contentsOfDirectory(atPath: tmpDirURL.path)
             for item in tmpDirectory {
                 if item.contains("tempMovie") {
                     print(item)
-                    movies.append(FileListModel(timeStampFileName: item.replacingOccurrences(of: "tempMovie", with: "")))
+                    videos.append(FileListModel(timeStampFileName: item.replacingOccurrences(of: "tempMovie", with: "")))
                 }
                 
             }
         } catch {
            //catch the error somehow
         }
-        return movies
+        return videos
+    }
+    func getVideoPathUrl(fileName:String) -> String? {
+        let urlString:String? = nil
+        do {
+            let tmpDirURL = FileManager.default.temporaryDirectory
+            let tmpDirectory = try contentsOfDirectory(atPath: tmpDirURL.path)
+            for item in tmpDirectory {
+                if item.contains("tempMovie") {
+                    print(item)
+                    if item.contains(fileName) {
+                        return tmpDirURL.absoluteString + item
+                    }
+                }
+                
+            }
+        } catch {
+           //catch the error somehow
+        }
+        return urlString
     }
 }

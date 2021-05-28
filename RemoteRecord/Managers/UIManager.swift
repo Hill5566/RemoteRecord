@@ -33,6 +33,12 @@ class UIManager: NSObject {
         vc.modalPresentationStyle = .fullScreen
         return vc as! FileListVC
     }
+    static func getVideoViewerVC() -> VideoViewerVC {
+        let vc = fileListStoryboard.instantiateViewController(identifier: "VideoViewerVC")
+        vc.modalPresentationStyle = .fullScreen
+        return vc as! VideoViewerVC
+    }
+    
     static func switchToLogin() {
         keyWindow?.rootViewController = loginStoryboard.instantiateViewController(withIdentifier: "LoginVC")
     }
