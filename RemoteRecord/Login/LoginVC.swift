@@ -8,10 +8,55 @@
 import UIKit
 import PodioKit
 import ProgressHUD
-
+import SynologyKit
 
 class LoginVC: UIViewController {
 
+    private var client: SynologyClient?
+    
+    @IBAction func loginNASClick(_ sender: UIButton) {
+        
+        client = SynologyClient(host: "61.142.9.96", port: 5000, enableHTTPS: false)
+        client?.login(account: "daniel", passwd: "ngt360") { [weak self] response in
+            switch response {
+            case .success(let authRes):
+                self?.client?.updateSessionID(authRes.sid)
+                self?.handleLoginSuccess()
+                print(authRes.sid)
+            case .failure(let error):
+                print(error.description)
+            }
+        }
+    }
+    private func handleLoginSuccess() {
+        uploadImage()
+    }
+    
+    private func uploadImage() {
+        
+        guard let client = client else { return }
+
+        guard let url = Bundle.main.url(forResource: "IMG_5469", withExtension: "MOV"),
+            let data = try? Data(contentsOf: url) else {
+            return
+        }
+        
+        var options = SynologyClient.UploadOptions()
+        options.overwrite = true
+        options.modificationTime = Int64(Date().timeIntervalSince1970*1000)
+        client.upload(data: data, filename: "IMG_5469.MOV", destinationFolderPath: "/Production", createParents: true, options: options, progressHandler: { (progress) in
+            print("progress: \(progress.fractionCompleted)")
+        }) { result in
+            switch result {
+            case .failure(let error):
+                print(error.description)
+            case .success(let response):
+                print("uploaded:\(response)")
+            }
+        }
+    }
+    
+    
     @IBOutlet weak var emailTextField: UITextField!
     
     @IBOutlet weak var passwordTextField: UITextField!

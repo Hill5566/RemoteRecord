@@ -1,5 +1,7 @@
 ${PODS_ROOT}/Target Support Files/Pods-RemoteRecord/Pods-RemoteRecord-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
 ${BUILT_PRODUCTS_DIR}/CameraManager/CameraManager.framework
 ${BUILT_PRODUCTS_DIR}/KSTimeline/KSTimeline.framework
 ${BUILT_PRODUCTS_DIR}/PodioKit/PodioKit.framework
 ${BUILT_PRODUCTS_DIR}/ProgressHUD/ProgressHUD.framework
+${BUILT_PRODUCTS_DIR}/SynologyKit/SynologyKit.framework

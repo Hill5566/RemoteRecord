@@ -10,4 +10,5 @@ target 'RemoteRecord' do
   pod 'ProgressHUD'
   pod 'CameraManager', '~> 5.1'
   pod 'KSTimeline'
+  pod 'SynologyKit'
 end

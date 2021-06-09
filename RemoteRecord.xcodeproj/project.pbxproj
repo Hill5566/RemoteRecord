@@ -25,6 +25,7 @@
 		6D71FF3A257DE0FC006D5E53 /* ZoetekDataProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D71FF39257DE0FC006D5E53 /* ZoetekDataProcessor.swift */; };
 		6D9EE723265A47E500A54EB0 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9EE722265A47E500A54EB0 /* LoginVC.swift */; };
 		6D9EE726265A507F00A54EB0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9EE725265A507F00A54EB0 /* Extensions.swift */; };
+		6DA1F6952670F56B005D35FD /* IMG_5469.MOV in Resources */ = {isa = PBXBuildFile; fileRef = 6DA1F6942670F56B005D35FD /* IMG_5469.MOV */; };
 		6DB04197265CFB2C001BF7E8 /* SpeechManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB04196265CFB2C001BF7E8 /* SpeechManager.swift */; };
 		6DB0419A265CFB40001BF7E8 /* CustomCameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB04198265CFB40001BF7E8 /* CustomCameraVC.swift */; };
 		6DB0419B265CFB40001BF7E8 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB04199265CFB40001BF7E8 /* ImageViewController.swift */; };
@@ -53,6 +54,7 @@
 		6D71FF39257DE0FC006D5E53 /* ZoetekDataProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoetekDataProcessor.swift; sourceTree = "<group>"; };
 		6D9EE722265A47E500A54EB0 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		6D9EE725265A507F00A54EB0 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		6DA1F6942670F56B005D35FD /* IMG_5469.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = IMG_5469.MOV; sourceTree = "<group>"; };
 		6DB04196265CFB2C001BF7E8 /* SpeechManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechManager.swift; sourceTree = "<group>"; };
 		6DB04198265CFB40001BF7E8 /* CustomCameraVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCameraVC.swift; sourceTree = "<group>"; };
 		6DB04199265CFB40001BF7E8 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 			children = (
 				6DB6BC25265BDC1C00AED0B0 /* Login.storyboard */,
 				6D9EE722265A47E500A54EB0 /* LoginVC.swift */,
+				6DA1F6942670F56B005D35FD /* IMG_5469.MOV */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6DB6BC26265BDC1C00AED0B0 /* Login.storyboard in Resources */,
+				6DA1F6952670F56B005D35FD /* IMG_5469.MOV in Resources */,
 				6D3267342660C88D008785CA /* BigBunny.mp4 in Resources */,
 				6D3267352660C88D008785CA /* Toystory.mp4 in Resources */,
 				6D43C284265F9EC7001E655A /* FileList.storyboard in Resources */,

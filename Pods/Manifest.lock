@@ -1,30 +1,38 @@
 PODS:
+  - Alamofire (5.4.3)
   - CameraManager (5.1.3)
   - KSTimeline (0.1.1)
   - PodioKit (2.0.0):
     - PodioKit/Common (= 2.0.0)
   - PodioKit/Common (2.0.0)
   - ProgressHUD (13.6)
+  - SynologyKit (1.3.1):
+    - Alamofire
 
 DEPENDENCIES:
   - CameraManager (~> 5.1)
   - KSTimeline
   - PodioKit (~> 2.0)
   - ProgressHUD
+  - SynologyKit
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - CameraManager
     - KSTimeline
     - PodioKit
     - ProgressHUD
+    - SynologyKit
 
 SPEC CHECKSUMS:
+  Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
   CameraManager: 73936a52093081ba5e44914e8120ab511360f5d4
   KSTimeline: 41274a842dcd034c72e32330513c75ede6c32815
   PodioKit: 176859750dcfc3002cb51b88e09594d80bbd4a4a
   ProgressHUD: 4bdaa0d2ddf676b23324b199f9facffb5c3a1620
+  SynologyKit: 20b83b6d4d821ae888be14b4c0c5ad0caac80e3e
 
-PODFILE CHECKSUM: 401bb1bfd012e2eb1a6622964b178136c1777161
+PODFILE CHECKSUM: fa4c37d21bfdb9f2df3b64a0cd2b029cd50f19a4
 
 COCOAPODS: 1.9.1

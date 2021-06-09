@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vBw-kl-uZp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vBw-kl-uZp">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -52,12 +52,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xgy-yb-NhC">
+                                <rect key="frame" x="50" y="84" width="68" height="30"/>
+                                <state key="normal" title="Login Nas"/>
+                                <connections>
+                                    <action selector="loginNASClick:" destination="vBw-kl-uZp" eventType="touchUpInside" id="c5x-HF-7FW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Okx-p1-nRj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="8IJ-ab-5fZ" firstAttribute="centerX" secondItem="YKR-Q4-Zzu" secondAttribute="centerX" id="0Or-hP-tAN"/>
                             <constraint firstItem="8IJ-ab-5fZ" firstAttribute="top" secondItem="ybt-HP-geS" secondAttribute="bottom" constant="30" id="2Xd-Sb-8tI"/>
+                            <constraint firstItem="xgy-yb-NhC" firstAttribute="leading" secondItem="Okx-p1-nRj" secondAttribute="leading" constant="50" id="3IK-GJ-a4B"/>
                             <constraint firstItem="bSn-I6-Mb4" firstAttribute="top" secondItem="8IJ-ab-5fZ" secondAttribute="bottom" constant="30" id="8SG-Za-Tp0"/>
                             <constraint firstItem="8IJ-ab-5fZ" firstAttribute="leading" secondItem="Okx-p1-nRj" secondAttribute="leading" constant="50" id="8uI-cO-sm6"/>
                             <constraint firstItem="ybt-HP-geS" firstAttribute="leading" secondItem="Okx-p1-nRj" secondAttribute="leading" constant="50" id="HDg-TG-Ms2"/>
@@ -69,6 +77,7 @@
                             <constraint firstItem="qIh-WJ-5oD" firstAttribute="leading" secondItem="RAy-ea-Ken" secondAttribute="trailing" constant="8" id="bBI-FU-YsO"/>
                             <constraint firstItem="Okx-p1-nRj" firstAttribute="trailing" secondItem="8IJ-ab-5fZ" secondAttribute="trailing" constant="50" id="fW6-WZ-E3f"/>
                             <constraint firstItem="bSn-I6-Mb4" firstAttribute="centerY" secondItem="YKR-Q4-Zzu" secondAttribute="centerY" id="hIp-f9-mbC"/>
+                            <constraint firstItem="xgy-yb-NhC" firstAttribute="top" secondItem="Okx-p1-nRj" secondAttribute="top" constant="40" id="nYF-lU-pUK"/>
                             <constraint firstItem="RAy-ea-Ken" firstAttribute="centerY" secondItem="YKR-Q4-Zzu" secondAttribute="centerY" id="zjO-Lt-NW0"/>
                         </constraints>
                     </view>
