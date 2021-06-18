@@ -18,17 +18,24 @@ class FileListVC: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         fileList = FileManager().getMovieNames()
-        print(fileList.count)
+        sortFileList()
+        
         mTableView.reloadData()
     }
     
-
+    func sortFileList() {
+        fileList.sort { f1, f2 in
+            if let f1ts = Double(f1.timeStampFileName.replacingOccurrences(of: ".mp4", with: "")), let f2ts = Double(f2.timeStampFileName.replacingOccurrences(of: ".mp4", with: "")) {
+                return f1ts > f2ts
+            } else {
+                return false
+            }
+        }
+    }
 }
 
 extension FileListVC: UITableViewDelegate, UITableViewDataSource {
@@ -56,7 +63,4 @@ extension FileListVC: UITableViewDelegate, UITableViewDataSource {
         
         present(vc, animated: true, completion: nil)
     }
-    
-    
-    
 }
